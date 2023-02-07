@@ -16,7 +16,7 @@ namespace GenericsProject
             char[] charArray = { 'A', 'B', 'C' };
 
             Console.WriteLine("PLease Choose a program from below options");
-            Console.WriteLine("1.PrintArray\n2.PrintArray by using Generic method\n");
+            Console.WriteLine("1.PrintArray\n2.PrintArray by using Generic method\n3.Genericclass Concept");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
@@ -30,6 +30,14 @@ namespace GenericsProject
                     GenericPrintArray.ToPrint<int>(intArray);
                     GenericPrintArray.ToPrint<double>(doubleArray);
                     GenericPrintArray.ToPrint<char>(charArray);
+                    break;
+                case 3:
+                    Genericclass<int> p1 = new Genericclass<int>(intArray);
+                    p1.Toprint();
+                    Genericclass<double> p2 = new Genericclass<double>(doubleArray);
+                    p2.Toprint();
+                    Genericclass<char> p3 = new Genericclass<char>(charArray);
+                    p3.Toprint();
                     break;
             }
             Console.ReadLine();
